@@ -2,7 +2,7 @@ import React from "react";
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../../src/assets/kevinRushProfile.png";
 import { motion } from "framer-motion";
-
+import { BiDownload } from "react-icons/bi";
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
   visible: {
@@ -13,6 +13,12 @@ const container = (delay) => ({
 });
 
 const Hero = () => {
+  const handleResumeDownload = () => {
+    window.open(
+      "https://drive.google.com/file/d/1rBoPthO25ONCPa-fGQHiFfJyUOwFmPk5/view?usp=sharing",
+      "_blank"
+    );
+  };
   return (
     <div className="border-b border-neutral-900 pb-4 lg:mb-35">
       <div className="flex flex-wrap">
@@ -42,6 +48,15 @@ const Hero = () => {
             >
               {HERO_CONTENT}
             </motion.p>
+            <motion.button
+              variants={container(1.5)}
+              initial="hidden"
+              animate="visible"
+              className="rounded-full bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 px-6 py-3 font-semibold text-white flex items-center "
+              onClick={handleResumeDownload}
+            >
+              Resume <BiDownload className="ml-2" />
+            </motion.button>
           </div>
         </div>
 
