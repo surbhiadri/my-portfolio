@@ -70,6 +70,6 @@ export const PROJECTS = [
 
 export const CONTACT = {
   address: "Bangaluru, India",
-  phoneNo: "+91 8340520783",
+  phoneNo: "+91 83xxxxxxxx",
   email: "surbhikumari63788@gmai.com",
 };
