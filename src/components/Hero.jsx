@@ -23,6 +23,17 @@ const Hero = () => {
     <div className="border-b border-neutral-900 pb-4 lg:mb-35">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
+          <div className="flex flex-start mb-2">
+            <motion.button
+              variants={container(1.5)}
+              initial="hidden"
+              animate="visible"
+              className="flex md:hidden rounded-full bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 px-6 py-3 font-semibold text-white items-center  "
+              onClick={handleResumeDownload}
+            >
+              Resume <BiDownload className="ml-2" />
+            </motion.button>
+          </div>
           <div className="flex flex-col items-center lg:items-start">
             <motion.h1
               variants={container(0)}
@@ -48,16 +59,16 @@ const Hero = () => {
             >
               {HERO_CONTENT}
             </motion.p>
-            <motion.button
-              variants={container(1.5)}
-              initial="hidden"
-              animate="visible"
-              className="rounded-full bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 px-6 py-3 font-semibold text-white flex items-center "
-              onClick={handleResumeDownload}
-            >
-              Resume <BiDownload className="ml-2" />
-            </motion.button>
           </div>
+          <motion.button
+            variants={container(1.5)}
+            initial="hidden"
+            animate="visible"
+            className="hidden md:flex rounded-full bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 px-6 py-3 font-semibold text-white items-center  "
+            onClick={handleResumeDownload}
+          >
+            Resume <BiDownload className="ml-2" />
+          </motion.button>
         </div>
 
         <div className="w-full lg:w-1/2 lg:p-8">
