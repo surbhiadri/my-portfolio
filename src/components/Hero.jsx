@@ -15,7 +15,7 @@ const container = (delay) => ({
 const Hero = () => {
   const handleResumeDownload = () => {
     window.open(
-      "https://drive.google.com/file/d/1rBoPthO25ONCPa-fGQHiFfJyUOwFmPk5/view?usp=sharing",
+      "https://drive.google.com/file/d/1PXfs6DUJmwT0BFsdmlF9AcjDSQ-OQV9D/view?usp=drivesdk ",
       "_blank"
     );
   };
